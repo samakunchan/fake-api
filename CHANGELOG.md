@@ -1,3 +1,7 @@
+# 🚀 0.1.1 - 14/04/2022
+- [S] Passage en lazy loading
+- [S] Ajout du premier controller et services
+
 # 🔥😤🔥 0.1.0 - 14/04/2022
 - [S] Ajout du dossier core contenant tout le necessaire pour la connexion a la base de donnée
 
