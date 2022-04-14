@@ -34,7 +34,6 @@ export class NotesService {
       updatedAt: new Date(),
     });
 
-    console.log(note);
     return this.notesRepository.findOneBy({ id: note.id });
   }
 
@@ -42,7 +41,6 @@ export class NotesService {
     console.log('Delete');
     const deleteResponse = await this.notesRepository.delete(note.id);
     if (!deleteResponse.affected) {
-      console.log('Pas bon');
       throw new HttpException(
         `Note '${note.id}' not found`,
         HttpStatus.NOT_FOUND,
