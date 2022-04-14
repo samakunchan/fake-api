@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { IHome } from './core/interfaces/home.interface';
 
 @Injectable()
 export class AppService {
-  getInfos() {
+  getInfos(): IHome {
     return {
       titre: `Fake API v${process.env.npm_package_version}`,
       framework: `NestJS`,

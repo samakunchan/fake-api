@@ -1,3 +1,6 @@
+# 🔥😤🔥 0.1.0 - 14/04/2022
+- [S] Ajout du dossier core contenant tout le necessaire pour la connexion a la base de donnée
+
 # 🔨😅 0.0.5 - 14/04/2022
 - [S] Fix de la dépendance TypeOrm qui ne voulait pas s'importer. Ajout à la main dans le package.json
 
