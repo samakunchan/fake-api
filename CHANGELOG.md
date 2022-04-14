@@ -1,3 +1,6 @@
+# ❄️ 0.0.3 - 14/04/2022
+- [S] Dockerisation de l'application
+
 # 📝 0.0.2 - 14/04/2022
 - [S] Modification du Readme et ajout d'un Change log.
 
