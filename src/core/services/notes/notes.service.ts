@@ -16,22 +16,33 @@ export class NotesService {
   }
 
   async create(note: INote): Promise<INote> {
-    const newNote = await this.notesRepository.create(note);
+    console.log('Create');
+    const newNote = await this.notesRepository.create({
+      ...note,
+      createdAt: new Date(),
+    });
     await this.notesRepository.save(newNote);
     return newNote;
   }
 
   async update(note: INote): Promise<INote> {
+    console.log('Update');
+    // Retourne un truc comme ça: UpdateResult { generatedMaps: [], raw: [], affected: 1 }
+    // il faut .find() pour retrouver l'objet modifier
     await this.notesRepository.update(note.id, {
       ...note,
       updatedAt: new Date(),
     });
-    return note;
+
+    console.log(note);
+    return this.notesRepository.findOneBy({ id: note.id });
   }
 
   async delete(note: INote): Promise<INote> {
+    console.log('Delete');
     const deleteResponse = await this.notesRepository.delete(note.id);
     if (!deleteResponse.affected) {
+      console.log('Pas bon');
       throw new HttpException(
         `Note '${note.id}' not found`,
         HttpStatus.NOT_FOUND,
