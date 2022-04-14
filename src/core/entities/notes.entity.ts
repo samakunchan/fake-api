@@ -6,7 +6,7 @@ import {
 } from 'typeorm';
 
 @Entity({ name: 'notes' })
-class User {
+class ENotes {
   @PrimaryGeneratedColumn()
   public id?: number;
 
@@ -27,4 +27,4 @@ class User {
   public updatedAt?: string;
 }
 
-export default User;
+export default ENotes;

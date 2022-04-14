@@ -3,12 +3,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DatabaseModule } from './core/database/database.module';
 import { ConfigModule } from '@nestjs/config';
-import { NotesController } from './controllers/notes/notes.controller';
-import { NotesService } from './core/services/notes/notes.service';
+import { NotesModule } from './controllers/notes/notes.module';
 
 @Module({
-  imports: [DatabaseModule, ConfigModule.forRoot()],
-  controllers: [AppController, NotesController],
-  providers: [AppService, NotesService],
+  imports: [DatabaseModule, ConfigModule.forRoot(), NotesModule],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
