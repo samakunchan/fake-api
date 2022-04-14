@@ -1,3 +1,6 @@
+# 🔨😅 0.0.5 - 14/04/2022
+- [S] Fix de la dépendance TypeOrm qui ne voulait pas s'importer. Ajout à la main dans le package.json
+
 # 💻 0.0.4 - 14/04/2022
 - [S] Ajout des dépendances Cookie parser, Validateur d'entité, TypeORM, ConfigModule, NestService, JWT
 
